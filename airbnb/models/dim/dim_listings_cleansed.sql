@@ -23,6 +23,13 @@ SELECT
     10,
     2
   ) AS price,
+  REPLACE(
+    price_str,
+    '$'
+  ) :: NUMBER(
+    10,
+    0
+  ) AS price_rounded,
   price_str,
   created_at,
   updated_at
